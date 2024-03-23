@@ -1,38 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.light {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  /* Other light theme styles */
+}
+
+.dark {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  /* Other dark theme styles */
+}
+
 .App {
-  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* Rest of the styling */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+nav {
+  height: 8vh;
+  color: yellow !important;
+
+  button {
+    background-color: transparent;
+    border-style: none;
+  }
+
+  .a {
+    color: var(--text-color) !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ------------------Main Content---------- */
+
+.banner {
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
+footer {
+  z-index: 2;
+  position: fixed;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  svg {
+    margin-bottom: 0.5rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.anish-logo {
+  width: 50%;
+  height: 80vh;
+}
+
+.banner-content {
+  .hello {
+    background-image: linear-gradient(to right, #32f6f6, #a6a79f);
+    font-weight: bold;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 3rem 2rem 2rem 0;
+    color: white;
+  }
+
+  h1 {
+    margin-top: 1rem;
+
+    span {
+      color: #737373;
+      text-decoration: underline;
+      margin-right: 20px;
+    }
+  }
+
+  button {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-style: none;
+    color: white;
+    border-radius: 0.7rem;
+    border: 4px solid white;
+  }
+
+  .cv-btn {
+    background-image: linear-gradient(to right, #df580c, #fd993d);
+    margin-right: 1rem;
+  }
+
+  .touch-btn {
+    background-image: linear-gradient(to right, #434343, #000000);
+  }
+
+  .email {
+    z-index: 2;
+    position: fixed;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones*/
+
+  .banner {
+    min-height: 100vh;
+  }
+
+  .anish-logo {
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 2rem;
+  }
+
+  .banner-content {
+    margin-left: 2rem;
+  }
+}
+
+/* ------------About section------------ */
+
+.about {
+  height: 100vh;
+  background-image: url("./Components/Images/about-bg.png");
+  background-size: cover;
+}
+
+.about-dark-bg {
+  background-image: url("./Components/Images/about-dark-bg.png");
+}
+
+.about-content {
+  width: 55vw;
+  height: 60vh;
+  margin-top: 7rem;
+  margin-left: 10rem;
+
+  b {
+    font-weight: 400;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  span {
+    font-size: 3rem;
+  }
+
+  .email {
+    z-index: 2;
+    position: fixed;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones*/
+
+  .about {
+    min-height: 100vh;
+  }
+
+  .about-content {
+    margin-left: 0rem;
   }
 }
